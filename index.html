@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My 1st VueJS Study</title>
+	<script type="text/javascript" src="node_modules/vue/dist/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+
+<div class="container">
+	<div id="app">
+
+		<h1>Bem vindo, {{ name }} {{ lastName }}</h1>
+			<div class="form-group">
+				<label class="control-lavel">Nome:</label>
+				<input type="text" name="name"  v-model="name">
+			</div>
+
+		  <p>{{ message }}</p>
+		  <pre>{{$data | json}}</pre>
+
+	</div> <!-- ./app -->
+
+	<div id="list">
+		<ol>
+			<li v-for="todo in todos">
+				{{ todo.text }}
+			</li>
+		</ol>
+	</div>
+
+	<pre>{{ $data | json }}</pre>
+
+
+</div> <!-- ./container -->
+<script type="text/javascript" src="js/myTest.js"></script>
+
+</body>
+</html>
